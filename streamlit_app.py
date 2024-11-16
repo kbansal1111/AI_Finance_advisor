@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-API_Key="AIzaSyCFZy1n4bvWj3QXAC1nrwJr5aPQl43H2_k"
+from dotenv import load_dotenv
+import streamlit as st
+import os
+import google.generativeai as ggi
+# API_Key="AIzaSyCFZy1n4bvWj3QXAC1nrwJr5aPQl43H2_k"
 # App interface
 st.title('AI Expense Tracker')
 st.info('This AI model will help u your finance')
