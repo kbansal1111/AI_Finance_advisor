@@ -10,7 +10,7 @@ product_category = st.selectbox(
     "Select your Category",
     options=["Food", "Travel", "Entertainment", "Bills", "Others"]
 )
-product_amount = st.number_input("Enter the Amount", min_value=0.0, step=1)
+product_amount = st.number_input("Enter the Amount", min_value=0, step=1)
 
 if "expense" not in st.session_state:
     st.session_state["expense"] = pd.DataFrame(columns=["Name", "monthly income", "product category", "product amount"])
