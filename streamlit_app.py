@@ -48,7 +48,7 @@ def format_expenses(expense, monthly_income, total_amount_spend):
     expense_summary += f"Total expenditure: {total_amount_spend}\n"
     expense_summary += "Breakdown of expenses by category:\n"
 
-    for _, row in expenses_df.iterrows():
+    for _, row in expense.iterrows():
         expense_summary += f"- {row['product category']}: {row['product amount']} (Savings: {row['savings']})\n"
 
     remaining_income = monthly_income - total_spend
