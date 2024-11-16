@@ -1,9 +1,6 @@
 # 📱 Expense Tracker
-```
-⬆️ (Replace above with your app's name)
-```
 
-Description of the app ...
+AI Driver Personal Finance Management App
 
 ## Demo App
 
