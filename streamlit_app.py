@@ -17,7 +17,7 @@ if "expense" not in st.session_state:
     
 if st.button("Add Expenditure"):
     if user_name and product_amount>0:
-        entry={'Name':user_name,'monthly income':monthly_income,'product category':product_category,'product amount':product_amount}
+        entry=pd.DataFrame[{'Name':user_name,'monthly income':monthly_income,'product category':product_category,'product amount':product_amount}]
         st.session_state["expense"]=pd.concat([st.session_state["expense"], entry], ignore_index=True)
         st.success("Expenditure added successfully")
     else:
