@@ -43,7 +43,7 @@ ax.set_title('Monthly Income vs Total Expenditure')
 st.pyplot(fig)
 
 # model using gemini api
-export API_KEY="AIzaSyCFZy1n4bvWj3QXAC1nrwJr5aPQl43H2_k"
+API_KEY="AIzaSyCFZy1n4bvWj3QXAC1nrwJr5aPQl43H2_k"
 ggi.configure(API_KEY)
 model = ggi.GenerativeModel("gemini-pro") 
 chat = model.start_chat()
