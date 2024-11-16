@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 st.title('AI Expense Tracker')
 st.info('This AI model will help u your finance')
 user_name=st.text_input('enter your name')
