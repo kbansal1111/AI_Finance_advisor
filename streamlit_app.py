@@ -34,4 +34,3 @@ ax.bar(['monthly income', 'Total Expenditure'], [monthly_income, total_amount_sp
 ax.set_ylabel('Amount')
 ax.set_title('Monthly Income vs Total Expenditure')
 st.pyplot(fig)
-
