@@ -56,7 +56,7 @@ st.write("Financial advices")
 btn = st.button("Ask")
 
 if btn and user_quest:
-    prompt=f"Here are user income,savings and expenses give me financial advise based on this {st.session_state["expense"][monthly income]}\n{st.session_state["expense"][savings]\nst.session_state["expense"][total_amount_spend]} "
+    prompt=f"Here are user income,savings and expenses give me financial advise based on this {st.session_state["expense"][monthly income]}\n,{st.session_state["expense"][savings]}\n,{st.session_state["expense"][total_amount_spend]}"
     
     result = LLM_Response(prompt)
     st.subheader("Response : ")
