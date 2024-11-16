@@ -26,7 +26,7 @@ if st.button("Add Expenditure"):
 if not st.session_state["expense"].empty:
     st.header("your expenditure")
     st.dataframe(st.session_state["expense"])
-total_amount_spend=st.session_state["expense"].sum()
+total_amount_spend=st.session_state["expense"]["product amount"].sum()
 st.write(f"Total expenditure is {total_amount_spend}")
 
 fig,ax = plt.subplots()
