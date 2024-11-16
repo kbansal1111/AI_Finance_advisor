@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from dotenv import load_dotenv
 import os
 import google.generativeai as ggi
 
@@ -44,8 +43,8 @@ ax.set_title('Monthly Income vs Total Expenditure')
 st.pyplot(fig)
 
 # model using gemini api
-api_key=
-ggi.configure(api_key)
+export API_KEY="AIzaSyCFZy1n4bvWj3QXAC1nrwJr5aPQl43H2_k"
+ggi.configure(API_KEY)
 model = ggi.GenerativeModel("gemini-pro") 
 chat = model.start_chat()
 
