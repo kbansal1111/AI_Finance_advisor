@@ -45,3 +45,4 @@ ax.set_title('Monthly Income vs Total Expenditure')
 st.pyplot(fig)
 
 # model using gemini api
+
