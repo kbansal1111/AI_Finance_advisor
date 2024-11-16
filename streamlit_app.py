@@ -43,6 +43,19 @@ ax.set_title('Monthly Income vs Total Expenditure')
 st.pyplot(fig)
 
 # model using gemini api
+def format_expenses(expense, monthly_income, total_amount_spend):
+    expense_summary = f"User's monthly income: {monthly_income}\n"
+    expense_summary += f"Total expenditure: {total_amount_spend}\n"
+    expense_summary += "Breakdown of expenses by category:\n"
+
+    for _, row in expenses_df.iterrows():
+        expense_summary += f"- {row['product category']}: {row['product amount']} (Savings: {row['savings']})\n"
+
+    remaining_income = monthly_income - total_spend
+    expense_summary += f"\nRemaining income: {remaining_income}\n"
+    
+    return expense_summary
+
 API_KEY="AIzaSyCFZy1n4bvWj3QXAC1nrwJr5aPQl43H2_k"
 ggi.configure(api_key=API_KEY)
 model = ggi.GenerativeModel("gemini-pro") 
@@ -56,7 +69,8 @@ st.write("Financial advices")
 btn = st.button("Ask")
 
 if btn:
-    prompt=f"Here are user income,savings and expenses give me financial advise based on this {st.session_state["expense"]}\n{st.session_state["expense"]['total_amount_spend']}"
+    expense_details = format_expenses(st.session_state["expense"], monthly_income, total_amount_spend)
+    prompt = f"Here are the user's income, savings, and expenses. Please provide financial advice based on this:\n{expense_details}\nUser's question: {user_name}, {product_category}, {product_amount}"
     
     result = LLM_Response(prompt)
     st.subheader("Response : ")
