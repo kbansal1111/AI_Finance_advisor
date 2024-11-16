@@ -1,4 +1,4 @@
-# 📱 Expense Tracker
+💵 Expense Tracker
 
 AI Driver Personal Finance Management App
 
