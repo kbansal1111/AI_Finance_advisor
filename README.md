@@ -1,4 +1,4 @@
-# 📦 Streamlit App Starter Kit 
+# 📱 Expense Tracker
 ```
 ⬆️ (Replace above with your app's name)
 ```
