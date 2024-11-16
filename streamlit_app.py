@@ -51,7 +51,7 @@ def format_expenses(expense, monthly_income, total_amount_spend):
     for _, row in expense.iterrows():
         expense_summary += f"- {row['product category']}: {row['product amount']} (Savings: {row['savings']})\n"
 
-    remaining_income = monthly_income - total_spend
+    remaining_income = monthly_income - total_amount_spend
     expense_summary += f"\nRemaining income: {remaining_income}\n"
     
     return expense_summary
