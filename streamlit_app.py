@@ -57,7 +57,7 @@ def LLM_Response(question):
 
 st.write("Financial advices")
 
-user_quest = st.text_input("Ask a question:")
+user_quest = st.text_input()
 btn = st.button("Ask")
 
 if btn and user_quest:
