@@ -13,7 +13,7 @@ product_category = st.selectbox(
 product_amount = st.number_input("Enter the Amount", min_value=0.0, step=0.1)
 
 if "expense" not in st.session_state:
-    st.session_state["expense"] = pd.DataFrame(columns=["Name", "Monthly Income", "Category", "Amount"])
+    st.session_state["expense"] = pd.DataFrame(columns=["Name", "Monthly Income", "product Category", "product amount"])
     
 if st.button("Add Expenditure"):
     if user_name and product_amount>0:
