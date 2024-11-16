@@ -15,7 +15,7 @@ product_amount = st.number_input("Enter the Amount", min_value=0.0, step=0.1)
 if st.button("Add Expenditure"):
     if user_name and product_amount>0:
         entry={'Name':user_name,'monthly income':monthly_income,'product category':product_category,'product amount':product_amount}
-        st.session_state["expense"]=st.session_state["expense"].append(entry)
+        st.session_state["expense"]=st.session_state["expense"].append(entry,ignore_index=True)
         st.success("Expenditure added successfully")
     else:
         st.error("please fill entry correctly")
