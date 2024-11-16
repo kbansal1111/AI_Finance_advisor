@@ -53,12 +53,12 @@ def LLM_Response(question):
     return response
 
 st.write("Financial advices")
-
-user_quest = st.text_input("suggestions")
 btn = st.button("Ask")
 
 if btn and user_quest:
-    result = LLM_Response(user_quest)
+    prompt=f"Here are user income,savings and expenses give me financial advise based on this {st.session_state["expense"][monthly income]}\n{st.session_state["expense"][savings]\nst.session_state["expense"][total_amount_spend]} "
+    
+    result = LLM_Response(prompt)
     st.subheader("Response : ")
     for word in result:
         st.text(word.text)
