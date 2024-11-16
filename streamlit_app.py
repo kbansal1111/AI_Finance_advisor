@@ -1,5 +1,4 @@
 import streamlit as st
 
 st.title('AI Expense Tracker')
-
-st.write('Hello world!')
+st.info('This AI model will help in your finance')
