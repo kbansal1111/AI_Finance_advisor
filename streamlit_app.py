@@ -29,7 +29,7 @@ if not st.session_state["expense"].empty:
 total_amount_spend=st.session_state["expense"]["product amount"].sum()
 st.write(f"Total expenditure is {total_amount_spend}")
 
-fig,ax = plt.subplots()
+fig,ax = plt.subplots(figsize=(10,7))
 ax.bar(['monthly income', 'Total Expenditure'], [monthly_income, total_amount_spend], color=['green', 'red'])
 ax.set_ylabel('Amount')
 ax.set_title('Monthly Income vs Total Expenditure')
