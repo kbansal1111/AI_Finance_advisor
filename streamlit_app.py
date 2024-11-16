@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 st.title('AI Expense Tracker')
 st.info('This AI model will help u your finance')
 user_name=st.text_input('enter your name')
@@ -25,3 +26,8 @@ if st.button("Add Expenditure"):
 if not st.session_state["expense"].empty:
     st.header("your expenditure")
     st.dataframe(st.session_state["expense"])
+total_amount_spend=st.session_state["expense"].sum()
+st.write(f"Total expenditure is {total_amount_spend}")
+
+st.write("Monthly income vs Total expense")
+st.line_chart(df, x="monthly income", y="total_amount_spend")
