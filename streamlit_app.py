@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import google.generativeai as ggi
 
-# App interface
+
 st.title('AI Expense Tracker')
 st.info('This AI model will help u your finance')
 user_name=st.text_input('enter your name')
