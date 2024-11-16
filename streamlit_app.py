@@ -38,7 +38,7 @@ total_amount_spend=st.session_state["expense"]["product amount"].sum()
 st.write(f"Total expenditure is {total_amount_spend}")
 
 # Graph
-fig,ax = plt.subplots(figsize=(3,3))
+fig,ax = plt.subplots(figsize=(2,3))
 ax.bar(['monthly income', 'Total Expenditure'], [monthly_income, total_amount_spend], color=['green', 'red'])
 ax.set_ylabel('Amount')
 ax.set_title('Monthly Income vs Total Expenditure')
@@ -55,7 +55,7 @@ def LLM_Response(question):
     response = chat.send_message(question,stream=True)
     return response
 
-st.write("Chat Application using Gemini Pro")
+st.write("Financial advices")
 
 user_quest = st.text_input("Ask a question:")
 btn = st.button("Ask")
