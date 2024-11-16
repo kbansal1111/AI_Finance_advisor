@@ -10,7 +10,7 @@ product_category = st.selectbox(
     "Select your Category",
     options=["Food", "Travel", "Entertainment", "Bills", "Others"]
 )
-product_amount = st.number_input("Enter the Amount", min_value=0.0, step=0.1)
+product_amount = st.number_input("Enter the Amount", min_value=0.0, step=1)
 
 if "expense" not in st.session_state:
     st.session_state["expense"] = pd.DataFrame(columns=["Name", "monthly income", "product category", "product amount"])
@@ -18,7 +18,7 @@ if "expense" not in st.session_state:
 if st.button("Add Expenditure"):
     if user_name and product_amount>0:
         entry=pd.DataFrame([{'Name':user_name,'monthly income':monthly_income,'product category':product_category,'product amount':product_amount}])
-        st.session_state["expense"]=pd.concat([st.session_state["expense"], entry], ignore_index=True)
+        st.session_state["expense"]=pd.concat([st.session_state["expense"], entry])
         st.success("Expenditure added successfully")
     else:
         st.error("please fill entry correctly")
