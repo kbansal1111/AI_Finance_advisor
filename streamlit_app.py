@@ -30,4 +30,4 @@ total_amount_spend=st.session_state["expense"].sum()
 st.write(f"Total expenditure is {total_amount_spend}")
 
 st.write("Monthly income vs Total expense")
-st.line_chart(x="monthly income", y="total_amount_spend")
+st.line_chart(x=st.session_state["expense"]["monthly income"], y="total_amount_spend")
