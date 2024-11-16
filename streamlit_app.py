@@ -44,7 +44,7 @@ st.pyplot(fig)
 
 # model using gemini api
 API_KEY="AIzaSyCFZy1n4bvWj3QXAC1nrwJr5aPQl43H2_k"
-ggi.configure(API_KEY)
+ggi.configure(api_key=API_KEY)
 model = ggi.GenerativeModel("gemini-pro") 
 chat = model.start_chat()
 
