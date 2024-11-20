@@ -1,6 +1,7 @@
 💵 Expense Tracker
 
-AI Driver Personal Finance Management App
+AI Driver Personal Finance Advisor App
+link-https://aiexpensetraker.streamlit.app/#c6b76bd7
 
 ## Demo App
 
